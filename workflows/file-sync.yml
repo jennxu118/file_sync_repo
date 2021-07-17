@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - develop
-  schedule:
-    - cron: 0 0 * * *
 
 jobs:
   file_sync:
@@ -22,5 +20,5 @@ jobs:
           PULL_REQUEST_BRANCH_NAME: |
             develop
           FILES: |
-            scrip/release_hotfix.sh=.github/release_hotfix.sh
+            scripts/release_hotfix.sh=.github/scripts/release_hotfix.sh
           TOKEN: ${{ secrets.ACTIONS }}
