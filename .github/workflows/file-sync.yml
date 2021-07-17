@@ -21,4 +21,4 @@ jobs:
             develop
           FILES: |
             scripts/release_hotfix.sh=.github/scripts/release_hotfix.sh
-          TOKEN: ${{ secrets.ACTION }}
+          TOKEN: ${{ secrets.SERVICE_USER_TOKEN }}
