@@ -19,6 +19,8 @@ jobs:
           REPOSITORIES: |
             jennxu118/auto-deploy@develop
             jennxu118/auto-test@develop
+          PULL_REQUEST_BRANCH_NAME: |
+            develop
           FILES: |
-            scrip/release_hotfix.sh=.github/script/release_hotfix.sh
+            scrip/release_hotfix.sh=.github/release_hotfix.sh
           TOKEN: ${{ secrets.ACTIONS }}
