@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - develop
-  schedule:
-    - cron: 0 0 * * *
 
 jobs:
   file_sync:
@@ -19,6 +17,8 @@ jobs:
           REPOSITORIES: |
             jennxu118/auto-deploy@develop
             jennxu118/auto-test@develop
+          PULL_REQUEST_BRANCH_NAME: |
+            develop
           FILES: |
-            scrip/release_hotfix.sh=.github/script/release_hotfix.sh
+            scripts/release_hotfix.sh=.github/scripts/release_hotfix.sh
           TOKEN: ${{ secrets.ACTIONS }}
